@@ -120,12 +120,28 @@ pre {
 
 /* Chat Settings */
 
+@keyframes fadeInHeader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .header {
   padding: 80px;
   text-align: center;
   background: #666d94;
   color: #B3D7FF;
+  /* Set initial opacity to 0 */
+  opacity: 0;
+  /* Apply the animation with a duration of 1 second */
+  animation: fadeInHeader 1s ease-in-out;
+  /* Ensure the final state remains visible */
+  animation-fill-mode: forwards;
 }
+
 .header h1 {
   font-size: 40px;
 }
@@ -135,14 +151,31 @@ pre {
   text-align:left;
 }
 
+@keyframes fadeInNavbar {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .navbar {
   overflow: hidden;
   background-color: #FDF7C2;
   color: #E1C171;
+  /* Set initial opacity to 0 */
+  opacity: 0;
+  /* Apply the animation with a duration of 1 second */
+  animation: fadeInNavbar 1s ease-in-out;
+  /* Ensure the final state remains visible */
+  animation-fill-mode: forwards;
 }
+
 div.a {
   text-indent: 1em;
 }
+
 .navbar a {
   float: left;
   display: block;
@@ -165,20 +198,48 @@ div.a {
   border-right:solid 1px #7b6f85;
 }
 
+@keyframes fadeInMain {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .main {
   box-sizing: border-box;
-  width: 100%; /* Set the width to 100% */
+  width: 100%; 
   color: #4E2A77;
   padding: 20px;
   background: #9a8ba6;
+  opacity: 0;
+  animation: fadeInMain 1s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
+@keyframes fadeInFooter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply the keyframes to the footer */
 .footer {
   padding: 15px;
   text-align: right;
   background: #666d94;
   color: #667292;
   border-radius: 25px;
+  /* Set initial opacity to 0 */
+  opacity: 0;
+  /* Apply the animation with a duration of 1 second */
+  animation: fadeInFooter 1s ease-in-out;
+  /* Ensure the final state remains visible */
+  animation-fill-mode: forwards;
 }
 
 .footer h2 {
@@ -189,12 +250,12 @@ div.a {
 
 
 a:link {
-  color: #A18A01;
+  color: #E9C600;
   background-color: transparent;
   text-decoration: none;
 }
 a:visited {
-  color: #FDF7C2;
+  color: #A18A01;
   background-color: transparent;
   text-decoration: none;
 }
@@ -208,4 +269,5 @@ a:active {
   background-color: transparent;
   text-decoration: underline;
 }
+
 
